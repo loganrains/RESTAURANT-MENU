@@ -3,11 +3,17 @@ using System.Runtime.CompilerServices;
 
 public class MenuItem
 {
+    private string name;
     private float price;
     private string description;
     private string category;
     private bool isNew;
 
+    public string Name
+    {
+        get { return name; }
+        set { name = value;}
+    }
 
     public float Price
     {
@@ -34,8 +40,9 @@ public class MenuItem
     }
 
 
-    public MenuItem(float price, string description, string category, bool isNew)
+    public MenuItem(string name, float price, string description, string category, bool isNew)
     {
+        this.name = name;
         this.price = price;
         this.description = description;
         this.category = category;
@@ -47,6 +54,7 @@ public class MenuItem
 
 public class Menu
 {
+
     private List<MenuItem> items;
     
     
@@ -55,4 +63,6 @@ public class Menu
         Menu.item.Add(MenuItem);
     }
     
+    // create properties for date/time when items are added.
+
 }
